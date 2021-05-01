@@ -1,0 +1,22 @@
+<h1>
+  Angular QR Code Generator
+</h1>
+
+<form #userlogin = "ngForm" (ngSubmit) = "gen(userlogin.value)" >
+   <input type = "email" name = "email" placeholder = "Email Id" ngModel>
+   <br/>
+   <input type = "text" name = "nm" placeholder = "Name" ngModel>
+   <br/>
+   <input type = "number" name = "ph" placeholder = "Phone No." ngModel>
+   <br/>
+   <input type = "text" name = "ad" placeholder = "Address" ngModel>
+   <br/>
+   <input type = "submit" value = "Generate QR Code">
+</form>
+
+
+<ngx-qrcode
+  [elementType]="elementType"
+  [errorCorrectionLevel]="correctionLevel"
+  [value]="value"
+></ngx-qrcode>
